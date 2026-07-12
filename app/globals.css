@@ -5,3 +5,28 @@ body {
     background: var(--color-ctp-base);
     color: var(--color-ctp-text);
 }
+
+a, a:visited {
+    color: var(--color-ctp-lavender);
+}
+
+header a, header a:visited {
+    color: var(--color-ctp-mauve);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+@keyframes pulsing-text {
+    from {
+        color: var(--color-ctp-lavender);
+    }
+    to {
+        color: var(--color-ctp-mauve);
+    }
+}

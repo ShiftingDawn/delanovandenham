@@ -1,8 +1,10 @@
 import type {Metadata} from "next";
-import {Ubuntu_Mono, Work_Sans} from "next/font/google";
+import {Montserrat, Ubuntu_Mono} from "next/font/google";
 import "./globals.css";
+import {NavBar} from "@/app/NavBar";
+import {ThemeProvider} from "@teispace/next-themes";
 
-const fontNormal = Work_Sans({
+const fontNormal = Montserrat({
     variable: "--font-normal",
     subsets: ["latin"],
 });
@@ -29,8 +31,16 @@ export default function RootLayout(
         <html
             lang="en"
             className={`${fontNormal.className} ${fontMono.variable} h-full antialiased`}
+            suppressHydrationWarning
         >
-        <body className="min-h-full flex flex-col">{children}</body>
+        <body className="min-h-full flex flex-col">
+        <ThemeProvider attribute={"class"} value={{light: "latte", dark: "mocha"}}>
+            <NavBar/>
+            <main className={"container max-w-2xl mx-auto px-4"}>
+                {children}
+            </main>
+        </ThemeProvider>
+        </body>
         </html>
     );
 }

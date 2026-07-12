@@ -1,0 +1,1 @@
+declare type FCC<T> = React.FC<T & Readonly<{ children: React.ReactNode }>>;
