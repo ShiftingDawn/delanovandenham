@@ -1,1 +1,1 @@
-declare type FCC<T> = React.FC<T & Readonly<{ children: React.ReactNode }>>;
+declare type FCP<T = object> = ReadOnly<T & { children: React.ReactNode }>

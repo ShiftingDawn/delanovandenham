@@ -16,6 +16,7 @@ header a, header a:visited {
 
 h1 {
     font-size: 3rem;
+    @apply font-semibold;
 }
 
 h2 {
