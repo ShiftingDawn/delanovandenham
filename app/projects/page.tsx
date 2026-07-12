@@ -55,7 +55,7 @@ function ProjectCard({slug, name, href, repo, tech}: Readonly<ProjectCardProps>)
                        className={"rounded-xl shadow-md"}/>
             </a>
             <div className={"pt-2 flex items-center justify-between"}>
-                <div className={"flex items-center gap-2 text-ctp-lavender"}>
+                <div className={"flex items-center gap-2 text-accent"}>
                     {tech.typescript && (
                         <Tooltip text={"TypeScript"} id={`${slug}_typescript`}>
                             <TechIconTypeScript/>

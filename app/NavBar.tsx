@@ -3,8 +3,8 @@ import {ThemeToggle} from "@/app/ThemeToggle";
 
 export function NavBar() {
     return (
-        <header className={"w-full sticky top-0 py-4 max-w-2xl mx-auto"}>
-            <div className={"flex w-full justify-between px-8 bg-ctp-crust shadow-lg rounded-2xl"}>
+        <header className={"w-full sticky top-0 md:py-4 md:max-w-2xl mx-auto overflow-hidden"}>
+            <div className={"flex w-full justify-between px-8 bg-ctp-crust shadow-lg md:rounded-2xl overflow-auto"}>
                 <nav className={"h-16 flex items-center gap-4"}>
                     <HomeLink/>
                     <NavLink href={"/"}>Home</NavLink>
@@ -13,10 +13,9 @@ export function NavBar() {
                     <NavLink href={"/blog"}>Blog</NavLink>
                     <NavLink href={"/resume"}>Resume</NavLink>
                 </nav>
-                <div className={"flex items-center justify-center h-16"}>
+                <div className={"flex items-center justify-center ml-8 h-16"}>
                     <ThemeToggle/>
                 </div>
-
             </div>
         </header>
     );
@@ -25,7 +24,7 @@ export function NavBar() {
 function HomeLink() {
     return (
         <Link href={"/"} className={"text-xl font-medium"}>
-            ShiftingDawn
+            Delano
         </Link>
     );
 }

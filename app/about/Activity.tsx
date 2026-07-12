@@ -35,7 +35,7 @@ export function Activity() {
             theme={{
                 dark: [
                     "var(--color-ctp-surface0)",
-                    "var(--color-ctp-mauve)",
+                    "var(--color-accent)",
                 ],
             }}
             tooltips={{

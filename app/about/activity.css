@@ -3,10 +3,10 @@
     max-width: calc(100vw - 20px);
     padding: 0.2em 0.5em;
     border-radius: 0.25em;
-    background-color: var(--color-ctp-lavender);
+    background-color: var(--color-accent);
     color: var(--color-ctp-base);
 }
 
 .react-activity-calendar__tooltip-arrow {
-    fill: var(--color-ctp-lavender);
+    fill: var(--color-accent);
 }

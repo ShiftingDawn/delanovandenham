@@ -1,17 +1,22 @@
 @import "tailwindcss";
 @import "@catppuccin/tailwindcss/mocha.css";
 
+@theme {
+    --color-accent: var(--color-ctp-lavender);
+    --color-accent2: var(--color-ctp-mauve);
+}
+
 body {
     background: var(--color-ctp-base);
     color: var(--color-ctp-text);
 }
 
 a, a:visited {
-    color: var(--color-ctp-lavender);
+    color: var(--color-accent);
 }
 
 header a, header a:visited {
-    color: var(--color-ctp-mauve);
+    color: var(--color-accent2);
 }
 
 h1 {
@@ -25,9 +30,9 @@ h2 {
 
 @keyframes pulsing-text {
     from {
-        color: var(--color-ctp-lavender);
+        color: var(--color-accent);
     }
     to {
-        color: var(--color-ctp-mauve);
+        color: var(--color-accent2);
     }
 }
