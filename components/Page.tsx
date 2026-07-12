@@ -6,10 +6,11 @@ interface Props {
 
 export function Page({name, children}: FCP<Props>) {
     return name ? (
-        <div className={"flex flex-col gap-4"}>
+        <div className={"flex flex-col gap-16"}>
             <div className={"w-full text-center"}>
                 <PageTitle>{name}</PageTitle>
             </div>
+            {children}
         </div>
     ) : children;
 }

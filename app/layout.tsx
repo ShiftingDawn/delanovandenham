@@ -36,7 +36,7 @@ export default function RootLayout(
         <body className="min-h-full flex flex-col">
         <ThemeProvider attribute={"class"} value={{light: "latte", dark: "mocha"}}>
             <NavBar/>
-            <main className={"container max-w-2xl mx-auto px-4 pt-16"}>
+            <main className={"container max-w-2xl mx-auto mb-16 px-4 pt-16"}>
                 {children}
             </main>
         </ThemeProvider>
