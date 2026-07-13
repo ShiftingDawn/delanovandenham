@@ -1,36 +1,28 @@
 "use client";
 
-import {useEffect, useRef, useState} from "react";
+import {useCallback, useEffect, useState} from "react";
 import {GitHubCalendar} from "react-github-calendar";
 import "./activity.css";
 
 export function Activity() {
     const [isMounted, setIsMounted] = useState(false);
-    const ref = useRef<HTMLElement>(null);
 
     useEffect(() => {
         // eslint-disable-next-line react-hooks/set-state-in-effect
         setIsMounted(true);
-        const observer = new MutationObserver((mutations) => {
-            for (const mutation of mutations) {
-                if (mutation.type === "childList") {
-                    if (ref.current) {
-                        ref.current.scrollLeft = ref.current.scrollWidth;
-                    }
-                }
-            }
-        });
-        if (ref.current) {
-            observer.observe(ref.current, {childList: true, subtree: true});
-        }
-        return () => {
-            observer.disconnect();
+    }, []);
+
+    const scroll = useCallback((node: HTMLElement) => {
+        if (!node) return;
+        const graphContainer = node.querySelector("div");
+        if (graphContainer) {
+            graphContainer.scrollLeft = graphContainer.scrollWidth;
         }
     }, []);
 
     return !isMounted ? null : (
         <GitHubCalendar
-            ref={ref}
+            ref={scroll}
             username={"ShiftingDawn"}
             theme={{
                 dark: [
