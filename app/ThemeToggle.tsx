@@ -44,7 +44,7 @@ export function ThemeToggle() {
             size={"2rem"}
             color={"var(--color-ctp-mauve)"}
             role={"button"}
-            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
+            aria-label={!isMounted ? "Unloaded theme switch" : `Switch to ${theme === "dark" ? "light" : "dark"} theme`}
             className={"cursor-pointer"}
             onClick={() => setTheme(getNextTheme(theme))}
         />
