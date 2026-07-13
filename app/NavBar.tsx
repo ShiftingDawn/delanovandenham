@@ -7,7 +7,6 @@ export function NavBar() {
             <div className={"flex w-full justify-between px-8 bg-ctp-crust shadow-lg md:rounded-2xl overflow-auto"}>
                 <nav className={"h-16 flex items-center gap-4"}>
                     <HomeLink/>
-                    <NavLink href={"/"}>Home</NavLink>
                     <NavLink href={"/projects"}>Projects</NavLink>
                     <NavLink href={"/about"}>About</NavLink>
                     <NavLink href={"/blog"}>Blog</NavLink>
