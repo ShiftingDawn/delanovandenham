@@ -4,7 +4,7 @@ import {HomeSubtitle} from "@/app/HomeSubtitle";
 export default function Home() {
     return (
         <div>
-            <div className={"flex flex-col items-center"}>
+            <div className={"flex flex-col items-center text-center"}>
                 <h1>Welcome, I&apos;m <AnimatedName/></h1>
                 <HomeSubtitle/>
             </div>
