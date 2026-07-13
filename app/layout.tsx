@@ -3,6 +3,8 @@ import {Montserrat, Ubuntu_Mono} from "next/font/google";
 import "./globals.css";
 import {NavBar} from "@/app/NavBar";
 import {ThemeProvider} from "@teispace/next-themes";
+import {Focus} from "@hugeicons/core-free-icons";
+import {Footer} from "@/app/Footer";
 
 const fontNormal = Montserrat({
     variable: "--font-normal",
@@ -36,9 +38,10 @@ export default function RootLayout(
         <body className="min-h-full flex flex-col">
         <ThemeProvider attribute={"class"} value={{light: "latte", dark: "mocha"}}>
             <NavBar/>
-            <main className={"container max-w-2xl mx-auto mb-16 px-4 pt-16"}>
+            <main className={"container max-w-2xl mx-auto mb-16 px-4 pt-16 flex-1"}>
                 {children}
             </main>
+            <Footer/>
         </ThemeProvider>
         </body>
         </html>
