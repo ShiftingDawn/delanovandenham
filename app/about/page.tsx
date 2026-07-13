@@ -7,7 +7,7 @@ import {OfficeIcon} from "@hugeicons/core-free-icons";
 
 export default async function PageAbout() {
     return (
-        <Page name={"About me"}>
+        <Page title={"About me"}>
             <InfoChip icon={<HugeiconsIcon icon={OfficeIcon}/>}
                       text={"Looking for opportunities in and around Nieuwegein (the Netherlands)"}/>
             <SectionHeader>

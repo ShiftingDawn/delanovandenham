@@ -8,11 +8,10 @@ import {
     TechIconTypeScript
 } from "@/app/projects/icons";
 import {Tooltip} from "$c/Tooltip";
-import {Tool} from "@hugeicons/core-free-icons";
 
 export default function PageProjects() {
     return (
-        <Page name={"projects"}>
+        <Page title={"projects"}>
             <ProjectCard
                 slug={"portfolio"}
                 name={"Portfolio"}

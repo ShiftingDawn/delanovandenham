@@ -1,14 +1,14 @@
 import {PageTitle} from "$c/PageTitle";
 
 interface Props {
-    name?: string;
+    title?: string;
 }
 
-export function Page({name, children}: FCP<Props>) {
-    return name ? (
+export function Page({title, children}: FCP<Props>) {
+    return title ? (
         <div className={"flex flex-col gap-4"}>
             <div className={"w-full text-center mb-12"}>
-                <PageTitle>{name}</PageTitle>
+                <PageTitle>{title}</PageTitle>
             </div>
             {children}
         </div>
