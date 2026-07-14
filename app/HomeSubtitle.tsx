@@ -2,6 +2,7 @@
 
 import {useEffect, useRef} from "react";
 import Typed from "typed.js";
+import {Heading} from "$c/typography/Heading";
 
 export function HomeSubtitle() {
     const el = useRef(null);
@@ -27,9 +28,9 @@ export function HomeSubtitle() {
     }, []);
 
     return (
-        <h2 className={"font-mono"}>
+        <Heading level={2} className={"font-mono"}>
             <span ref={el}></span>
-        </h2>
+        </Heading>
     );
 }
 

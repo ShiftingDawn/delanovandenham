@@ -1,10 +1,11 @@
 import {ReactNode} from "react";
 import Image from "next/image";
+import {Heading} from "$c/typography/Heading";
 
 export function InternshipList() {
     return (
         <>
-            <h2 className={"text-center"}>Internships</h2>
+            <Heading level={2} className={"text-center"}>Internships</Heading>
             <div className={"flex flex-col gap-8"}>
                 <InternshipCard
                     company={"Your Next Concepts"}

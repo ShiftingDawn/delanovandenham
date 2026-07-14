@@ -1,10 +1,11 @@
 import Image from "next/image";
 import {ReactNode} from "react";
+import {Heading} from "$c/typography/Heading";
 
 export function JobList() {
     return (
         <>
-            <h2 className={"text-center"}>Work history</h2>
+            <Heading level={2} className={"text-center"}>Work history</Heading>
             <div className={"flex flex-col gap-8"}>
                 <JobCard
                     company={"MediaMarkt"}

@@ -1,13 +1,14 @@
 import {PulsingText} from "$c/PulsingText";
+import {Heading} from "$c/typography/Heading";
 
 export function PageTitle({children}: FCP) {
     return (
-        <h1>
+        <Heading level={1}>
             <PulsingText>
                 <span>&#123;&nbsp;</span>
                 {children}
                 <span>&nbsp;&#125;</span>
             </PulsingText>
-        </h1>
+        </Heading>
     )
 }

@@ -8,6 +8,7 @@ import {
     TechIconTypeScript
 } from "@/app/projects/icons";
 import {Tooltip} from "$c/Tooltip";
+import {Heading} from "$c/typography/Heading";
 
 export default function PageProjects() {
     return (
@@ -41,7 +42,7 @@ function ProjectCard({slug, name, href, repo, tech}: Readonly<ProjectCardProps>)
         <article className={"bg-ctp-mantle p-4 rounded-xl shadow-md"}>
             <div className={"flex gap-2 items-center"}>
                 <a href={href} className={"flex-1"}>
-                    <h2>{name}</h2>
+                    <Heading level={2}>{name}</Heading>
                 </a>
                 <Tooltip text={"View repository"} id={`${slug}_github`}>
                     <a href={repo} aria-label={"View GitHub repository"}>

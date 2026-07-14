@@ -1,10 +1,11 @@
 import Image from "next/image";
 import {ReactNode} from "react";
+import {Heading} from "$c/typography/Heading";
 
 export function SchoolList() {
     return (
         <>
-            <h2 className={"text-center"}>Education</h2>
+            <Heading level={2} className={"text-center"}>Education</Heading>
             <div className={"flex flex-col gap-8"}>
                 <SchoolCard
                     name={"HBO-ICT Software Development"}

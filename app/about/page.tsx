@@ -3,6 +3,7 @@ import {Activity} from "@/app/about/Activity";
 import {ReactNode} from "react";
 import {HugeiconsIcon} from "@hugeicons/react";
 import {OfficeIcon} from "@hugeicons/core-free-icons";
+import {Heading} from "$c/typography/Heading";
 
 
 export default async function PageAbout() {
@@ -95,5 +96,5 @@ function MarkedText({href, children}: FCP<{ href?: string }>) {
 }
 
 function SectionHeader({children}: FCP) {
-    return <h2 className={"mt-8"}>{children}</h2>;
+    return <Heading level={2} className={"mt-8"}>{children}</Heading>;
 }

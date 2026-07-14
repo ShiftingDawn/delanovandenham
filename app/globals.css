@@ -19,19 +19,6 @@ header a, header a:visited {
     color: var(--color-accent2);
 }
 
-h1 {
-    font-size: 3rem;
-    @apply font-semibold;
-}
-
-h2 {
-    font-size: 2.25rem;
-}
-
-h3 {
-    font-size: 1.75rem;
-}
-
 @keyframes pulsing-text {
     from {
         color: var(--color-accent);
