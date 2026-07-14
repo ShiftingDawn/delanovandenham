@@ -51,7 +51,7 @@ interface JobCardProps {
 
 function JobCard({company, jobTitle, when, description, image}: JobCardProps) {
     return (
-        <div className={"w-full max-w-lg mx-auto bg-ctp-surface0 p-4 rounded-lg"}>
+        <article className={"w-full max-w-lg mx-auto bg-ctp-surface0 p-4 rounded-lg"}>
             <div className={"flex flex-col-reverse md:flex-row md:justify-between"}>
                 <p className={"text-xl font-bold text-accent"}>
                     {jobTitle}
@@ -63,6 +63,6 @@ function JobCard({company, jobTitle, when, description, image}: JobCardProps) {
             <p>{company}</p>
             <p>{when[0][0]} {when[0][1]} - {when[1][1] === -1 ? "current" : `${when[1][0]} ${when[1][1]}`}</p>
             {description && <p><i>{description}</i></p>}
-        </div>
+        </article>
     );
 }

@@ -49,7 +49,7 @@ interface SchoolCardProps {
 
 function SchoolCard({name, subname, school, schoolLocation, description, image}: Readonly<SchoolCardProps>) {
     return (
-        <div className={"w-full max-w-lg mx-auto bg-ctp-surface0 p-4 rounded-lg"}>
+        <article className={"w-full max-w-lg mx-auto bg-ctp-surface0 p-4 rounded-lg"}>
             <div className={"flex flex-col-reverse md:flex-row md:justify-between"}>
                 <p className={"text-xl font-bold text-accent"}>
                     {name}
@@ -61,6 +61,6 @@ function SchoolCard({name, subname, school, schoolLocation, description, image}:
             <p>{subname}</p>
             <p>{school}, {schoolLocation}</p>
             <p>{description}</p>
-        </div>
+        </article>
     );
 }

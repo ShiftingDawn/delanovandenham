@@ -38,7 +38,7 @@ interface ProjectCardProps {
 
 function ProjectCard({slug, name, href, repo, tech}: Readonly<ProjectCardProps>) {
     return (
-        <div className={"bg-ctp-mantle p-4 rounded-xl shadow-md"}>
+        <article className={"bg-ctp-mantle p-4 rounded-xl shadow-md"}>
             <div className={"flex gap-2 items-center"}>
                 <a href={href} className={"flex-1"}>
                     <h2>{name}</h2>
@@ -77,6 +77,6 @@ function ProjectCard({slug, name, href, repo, tech}: Readonly<ProjectCardProps>)
                     )}
                 </div>
             </div>
-        </div>
+        </article>
     );
 }
