@@ -51,7 +51,7 @@ function ProjectCard({slug, name, href, repo, tech}: Readonly<ProjectCardProps>)
             </div>
             <a href={href}>
                 <Image src={`/projects/${slug}.png`} alt={`screenshot of ${name}`} width={640} height={320}
-                       className={"rounded-xl shadow-md"}/>
+                       className={"rounded-xl shadow-md"} loading="eager" />
             </a>
             <div className={"pt-2 flex items-center justify-between"}>
                 <div className={"flex items-center gap-2 text-accent"}>
