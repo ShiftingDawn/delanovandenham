@@ -1,9 +1,19 @@
-import type { NextConfig } from "next";
+import type {NextConfig} from "next";
+import createMDX from "@next/mdx";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+    pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
 };
 
-export default nextConfig;
+const withMDX = createMDX({
+    extension: /\.(md|mdx)$/
+})
 
-import('@opennextjs/cloudflare').then(m => m.initOpenNextCloudflareForDev());
+export default withMDX({
+    ...nextConfig,
+    experimental: {
+        mdxRs: true,
+    }
+});
+
+import("@opennextjs/cloudflare").then(m => m.initOpenNextCloudflareForDev());

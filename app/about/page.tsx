@@ -4,6 +4,7 @@ import {ReactNode} from "react";
 import {HugeiconsIcon} from "@hugeicons/react";
 import {OfficeIcon} from "@hugeicons/core-free-icons";
 import {Heading} from "$c/typography/Heading";
+import {MarkedText} from "$c/typography/MarkedText";
 
 
 export default async function PageAbout() {
@@ -84,14 +85,6 @@ function InfoChip({icon, text}: Readonly<{ icon: ReactNode, text: string }>) {
             {icon}
             {text}
         </div>
-    );
-}
-
-function MarkedText({href, children}: FCP<{ href?: string }>) {
-    return href ? (
-        <a className={"text-accent font-bold underline"} href={href} target={"_blank"}>{children}</a>
-    ) : (
-        <span className={"text-accent font-bold"}>{children}</span>
     );
 }
 
