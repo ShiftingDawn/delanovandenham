@@ -42,7 +42,7 @@ export function ThemeToggle() {
         <HugeiconsIcon
             icon={!isMounted ? IconAutoMode : getNextThemeIcon(theme)}
             size={"2rem"}
-            color={"var(--color-ctp-mauve)"}
+            color={"var(--color-accent2)"}
             role={"button"}
             aria-label={!isMounted ? "Unloaded theme switch" : `Switch to ${theme === "dark" ? "light" : "dark"} theme`}
             className={"cursor-pointer"}

@@ -52,7 +52,7 @@ interface JobCardProps {
 
 function JobCard({company, jobTitle, when, description, image}: JobCardProps) {
     return (
-        <article className={"w-full max-w-lg mx-auto bg-ctp-surface0 p-4 rounded-lg"}>
+        <article className={"card w-full max-w-lg mx-auto"}>
             <div className={"flex flex-col-reverse md:flex-row md:justify-between"}>
                 <p className={"text-xl font-bold text-accent"}>
                     {jobTitle}

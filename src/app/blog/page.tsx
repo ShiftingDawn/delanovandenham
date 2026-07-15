@@ -22,7 +22,7 @@ interface BlogCardProps {
 function BlogCard({post}: Readonly<BlogCardProps>) {
     return (
         <Link href={`/blog/${post.slug}`} aria-label={`Go to blog article named ${post.title}`}>
-            <article className={"bg-ctp-surface0 rounded-lg p-4 shadow-lg flex flex-col gap-2"}>
+            <article className={"card flex flex-col gap-2"}>
                 <Heading level={2} className={"text-2xl font-bold text-accent"}>{post.title}</Heading>
                 <p className={"flex items-center gap-2"}>
                     <HugeiconsIcon icon={Calendar02Icon}/>

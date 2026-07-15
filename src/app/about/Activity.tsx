@@ -21,20 +21,22 @@ export function Activity() {
     }, []);
 
     return !isMounted ? null : (
-        <GitHubCalendar
-            ref={scroll}
-            username={"ShiftingDawn"}
-            theme={{
-                dark: [
-                    "var(--color-ctp-surface0)",
-                    "var(--color-accent)",
-                ],
-            }}
-            tooltips={{
-                activity: {
-                    withArrow: true,
-                    text: activity => `${activity.level} contributions on ${activity.date}`
-                }
-            }}/>
+        <div className={"card"}>
+            <GitHubCalendar
+                ref={scroll}
+                username={"ShiftingDawn"}
+                theme={{
+                    dark: [
+                        "var(--color-ctp-surface0)",
+                        "var(--color-accent)",
+                    ],
+                }}
+                tooltips={{
+                    activity: {
+                        withArrow: true,
+                        text: activity => `${activity.level} contributions on ${activity.date}`
+                    }
+                }}/>
+        </div>
     );
 }

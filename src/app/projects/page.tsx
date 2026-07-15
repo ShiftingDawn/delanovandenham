@@ -39,7 +39,7 @@ interface ProjectCardProps {
 
 function ProjectCard({slug, name, href, repo, tech}: Readonly<ProjectCardProps>) {
     return (
-        <article className={"bg-ctp-mantle p-4 rounded-xl shadow-md"}>
+        <article className={"card"}>
             <div className={"flex gap-2 items-center"}>
                 <a href={href} className={"flex-1"}>
                     <Heading level={2}>{name}</Heading>

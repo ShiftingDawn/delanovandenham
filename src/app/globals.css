@@ -3,7 +3,7 @@
 
 @theme {
     --color-accent: var(--color-ctp-lavender);
-    --color-accent2: var(--color-ctp-mauve);
+    --color-accent2: var(--color-ctp-blue);
 }
 
 body {
@@ -22,6 +22,10 @@ a, a:visited {
 
 header a, header a:visited {
     color: var(--color-accent2);
+}
+
+.card {
+    @apply bg-ctp-mantle shadow-lg p-4 rounded-2xl;
 }
 
 @keyframes pulsing-text {
