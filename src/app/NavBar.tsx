@@ -3,8 +3,8 @@ import {ThemeToggle} from "@/app/ThemeToggle";
 
 export function NavBar() {
     return (
-        <header className={"w-full sticky top-0 md:py-4 md:max-w-2xl mx-auto overflow-hidden"}>
-            <div className={"flex w-full justify-between px-8 bg-ctp-crust shadow-lg md:rounded-2xl overflow-auto"}>
+        <header className={"w-full sticky top-0 md:py-4 md:max-w-2xl mx-auto overflow-hidden shadow-lg md:shadow-none"}>
+            <div className={"flex w-full justify-between px-8 bg-ctp-crust/50 backdrop-blur-xs md:shadow-lg md:rounded-2xl overflow-auto"}>
                 <nav className={"h-16 flex items-center gap-4"}>
                     <HomeLink/>
                     <NavLink href={"/projects"}>Projects</NavLink>
