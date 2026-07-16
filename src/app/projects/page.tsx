@@ -9,6 +9,8 @@ import {
 } from "@/app/projects/icons";
 import {Tooltip} from "$c/Tooltip";
 import {Heading} from "$c/typography/Heading";
+import {technologies, Technology} from "@/app/projects/tech";
+import {createElement} from "react";
 
 export default function PageProjects() {
     return (
@@ -19,7 +21,7 @@ export default function PageProjects() {
                 href={"https://delanovandenham.com"}
                 repo={"https://github.com/ShiftingDawn/delanovandenham"}
                 description={"The website you are currently viewing"}
-                tech={{typescript: true, react: true, next: true, tailwind: true}}
+                tech={["typescript", "react", "next", "tailwind"]}
             />
             <ProjectCard
                 slug={"friday_at_work"}
@@ -27,7 +29,7 @@ export default function PageProjects() {
                 href={"https://friday.appelgebakje22.nl"}
                 repo={"https://github.com/ShiftingDawn/friday_at_work"}
                 description={"Simple consumption tracker with a receipt overview page. Drinking fairly at work has never been this easy"}
-                tech={{typescript: true, svelte: true, tailwind: true, prisma: true, sqlite: true}}
+                tech={["typescript", "svelte", "tailwind", "prisma", "sqlite"]}
             />
         </Page>
     );
@@ -39,18 +41,14 @@ interface ProjectCardProps {
     href: string;
     repo: string;
     description: string;
-    tech: {
-        typescript?: boolean;
-        react?: boolean;
-        next?: boolean;
-        tailwind?: boolean;
-        svelte?: boolean;
-        prisma?: boolean;
-        sqlite?: boolean;
-    };
+    tech: Array<Technology>;
 }
 
 function ProjectCard({slug, name, href, repo, description, tech}: Readonly<ProjectCardProps>) {
+    const techSorted = tech.sort((a, b) => {
+        const keys = Object.keys(technologies);
+        return keys.indexOf(a) - keys.indexOf(b);
+    });
     return (
         <article className={"card"}>
             <div className={"flex gap-2 items-center"}>
@@ -70,41 +68,12 @@ function ProjectCard({slug, name, href, repo, description, tech}: Readonly<Proje
             <p className={"my-2"}>{description}</p>
             <div className={"pt-2 flex items-center justify-between"}>
                 <div className={"flex items-center gap-2 text-accent"}>
-                    {tech.typescript && (
-                        <Tooltip text={"TypeScript"} id={`${slug}_typescript`}>
-                            <TechIconTypeScript/>
+                    {[techSorted.map(technology => (
+                        <Tooltip key={`${slug}_${technology}`} id={`${slug}_${technology}`}
+                                 text={technologies[technology][0]}>
+                            {createElement(technologies[technology][1])}
                         </Tooltip>
-                    )}
-                    {tech.react && (
-                        <Tooltip text={"React"} id={`${slug}_react`}>
-                            <TechIconReact/>
-                        </Tooltip>
-                    )}
-                    {tech.next && (
-                        <Tooltip text={"NextJS"} id={`${slug}_nextjs`}>
-                            <TechIconNextJs/>
-                        </Tooltip>
-                    )}
-                    {tech.tailwind && (
-                        <Tooltip text={"TailwindCSS"} id={`${slug}_tailwind`}>
-                            <TechIconTailwind/>
-                        </Tooltip>
-                    )}
-                    {tech.svelte && (
-                        <Tooltip text={"Svelte"} id={`${slug}_svelte`}>
-                            <TechIconSvelte/>
-                        </Tooltip>
-                    )}
-                    {tech.prisma && (
-                        <Tooltip text={"Prisma ORM"} id={`${slug}_prisma`}>
-                            <TechIconPrisma/>
-                        </Tooltip>
-                    )}
-                    {tech.sqlite && (
-                        <Tooltip text={"SQLite"} id={`${slug}_sqlite`}>
-                            <TechIconSqlite/>
-                        </Tooltip>
-                    )}
+                    ))]}
                 </div>
             </div>
         </article>
