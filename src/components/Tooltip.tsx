@@ -15,6 +15,9 @@ export function Tooltip({id, text, children}: FCP<Props>) {
                 backgroundColor: "var(--color-ctp-lavender)",
                 color: "var(--color-ctp-base)",
                 fontWeight: "bold",
+            }} globalCloseEvents={{
+                scroll: true,
+                clickOutsideAnchor: true,
             }}/>
         </div>
     );
