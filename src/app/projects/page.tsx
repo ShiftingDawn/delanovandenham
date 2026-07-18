@@ -1,12 +1,6 @@
 import {Page} from "$c/Page";
 import Image from "next/image";
-import {
-    TechIconGitHub,
-    TechIconNextJs, TechIconPrisma,
-    TechIconReact, TechIconSqlite, TechIconSvelte,
-    TechIconTailwind,
-    TechIconTypeScript
-} from "@/app/projects/icons";
+import {TechIconGitHub} from "@/app/projects/icons";
 import {Tooltip} from "$c/Tooltip";
 import {Heading} from "$c/typography/Heading";
 import {technologies, Technology} from "@/app/projects/tech";
@@ -21,15 +15,23 @@ export default function PageProjects() {
                 href={"https://delanovandenham.com"}
                 repo={"https://github.com/ShiftingDawn/delanovandenham"}
                 description={"The website you are currently viewing"}
-                tech={["typescript", "react", "next", "tailwind"]}
+                tech={["typescript", "react", "next", "tailwind", "cloudflareWorkers"]}
             />
             <ProjectCard
                 slug={"friday_at_work"}
                 name={"Friday at Work"}
                 href={"https://friday.appelgebakje22.nl"}
                 repo={"https://github.com/ShiftingDawn/friday_at_work"}
-                description={"Simple consumption tracker with a receipt overview page. Drinking fairly at work has never been this easy"}
-                tech={["typescript", "svelte", "tailwind", "prisma", "sqlite"]}
+                description={"Simple consumption tracker and inventory tracker with a receipt overview page. Drinking fairly at work has never been this easy"}
+                tech={["typescript", "svelte", "tailwind", "prisma", "postgres", "s3"]}
+            />
+            <ProjectCard
+                slug={"tracker"}
+                name={"Tracker"}
+                href={"https://tracker.shiftingdawn.com"}
+                repo={"https://github.com/ShiftingDawn/Tracker"}
+                description={"An application to track quest-like objects with tasks and subtasks"}
+                tech={["typescript", "svelte", "tailwind", "drizzle", "postgres"]}
             />
         </Page>
     );
