@@ -28,7 +28,7 @@ export function HomeSubtitle() {
     }, []);
 
     return (
-        <Heading level={2} className={"font-mono"}>
+        <Heading level={2} className={"font-mono h-12"}>
             <span ref={el}></span>
         </Heading>
     );
