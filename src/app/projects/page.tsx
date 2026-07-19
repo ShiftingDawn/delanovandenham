@@ -29,7 +29,7 @@ function ProjectCard({project}: Readonly<ProjectCardProps>) {
   return (
     <article className={"card"}>
       <div className={"flex gap-2 items-center"}>
-        <a href={project.href} className={"flex-1"}>
+        <a href={project.hrefInternal ?? project.href} className={"flex-1"}>
           <Heading level={2}>{project.name}</Heading>
         </a>
         <Tooltip text={"View repository"} id={`${project.slug}_github`}>
@@ -38,7 +38,7 @@ function ProjectCard({project}: Readonly<ProjectCardProps>) {
           </a>
         </Tooltip>
       </div>
-      <a href={project.href}>
+      <a href={project.hrefInternal ?? project.href} className={"flex-1"}>
         <Image src={`/projects/${project.slug}.png`} alt={`screenshot of ${project.name}`} width={640} height={320}
                className={"rounded-xl shadow-md"} loading="eager"/>
       </a>
