@@ -6,11 +6,11 @@ import {
   TechIconPostgres,
   TechIconPrisma,
   TechIconReact,
+  TechIconRedis,
   TechIconSvelte,
   TechIconTailwind,
-  TechIconTypeScript,
-  TechIconRedis
-} from "@/app/projects/icons";
+  TechIconTypeScript
+} from "./icons";
 import {HugeiconsIcon} from "@hugeicons/react";
 import {BucketIcon} from "@hugeicons/core-free-icons";
 
