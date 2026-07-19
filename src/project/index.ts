@@ -11,12 +11,12 @@ export interface Project {
 
 export const projects: Record<string, Project> = {
   portfolio: {
-    slug: "tracker",
-    name: "Tracker",
-    href: "https://tracker.appelgebakje22.nl",
-    repo: "https://github.com/ShiftingDawn/Tracker",
-    description: "An application to track quest-like objects with tasks and subtasks",
-    tech: ["typescript", "svelte", "tailwind", "drizzle", "postgres", "redis"],
+    slug: "portfolio",
+    name: "Portfolio",
+    href: "https://delanovandenham.com",
+    repo: "https://github.com/ShiftingDawn/delanovandenham",
+    description: "The website you are currently viewing",
+    tech: ["typescript", "react", "next", "tailwind", "cloudflareWorkers"],
   },
   friday_at_work: {
     slug: "friday_at_work",
