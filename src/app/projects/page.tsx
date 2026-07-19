@@ -28,10 +28,10 @@ export default function PageProjects() {
             <ProjectCard
                 slug={"tracker"}
                 name={"Tracker"}
-                href={"https://tracker.shiftingdawn.com"}
+                href={"https://tracker.appelgebakje22.nl"}
                 repo={"https://github.com/ShiftingDawn/Tracker"}
                 description={"An application to track quest-like objects with tasks and subtasks"}
-                tech={["typescript", "svelte", "tailwind", "drizzle", "postgres"]}
+                tech={["typescript", "svelte", "tailwind", "drizzle", "postgres", "redis"]}
             />
         </Page>
     );

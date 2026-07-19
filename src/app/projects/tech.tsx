@@ -8,7 +8,8 @@ import {
   TechIconReact,
   TechIconSvelte,
   TechIconTailwind,
-  TechIconTypeScript
+  TechIconTypeScript,
+  TechIconRedis
 } from "@/app/projects/icons";
 import {HugeiconsIcon} from "@hugeicons/react";
 import {BucketIcon} from "@hugeicons/core-free-icons";
@@ -22,6 +23,7 @@ export const technologies: Record<string, [string, JSXElementConstructor<unknown
   prisma: ["Prisma ORM", TechIconPrisma],
   drizzle: ["Drizzle ORM", TechIconDrizzle],
   postgres: ["PostgreSQL", TechIconPostgres],
+  redis: ["Redis", TechIconRedis],
   cloudflareWorkers: ["Cloudflare Workers", TechIconCloudflareWorkers],
   s3: ["Amazon S3", () => <HugeiconsIcon icon={BucketIcon} size={32}/>]
 }
