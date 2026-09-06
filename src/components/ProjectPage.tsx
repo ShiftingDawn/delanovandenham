@@ -25,9 +25,11 @@ export function ProjectPage({project, children}: FCP<ProjectPageProps>) {
             <Button href={project.repo} icon={<GitHubIcon/>}>
               GitHub
             </Button>
-            <Button href={project.href}>
-              Visit
-            </Button>
+            {project.href && (
+              <Button href={project.href}>
+                Visit
+              </Button>
+            )}
           </div>
         </div>
         <div className={"card flex flex-col gap-4"}>
@@ -80,6 +82,19 @@ export function ProjectImage({title, src, alt, children}: FCP<ProjectImageProps>
         <h2 className={"text-2xl text-accent"}>{title}</h2>
       )}
       <Image src={src} alt={alt} width={640} height={320} className={"rounded-xl shadow-md"} loading="eager"/>
+      {children}
+    </div>
+  );
+}
+
+interface ProjectSectionProps {
+  title?: string;
+}
+
+export function ProjectSection({title, children}: FCP<ProjectSectionProps>) {
+  return (
+    <div className={"card flex flex-col gap-4"}>
+      <h2 className={"text-2xl text-accent"}>{title ?? "Description"}</h2>
       {children}
     </div>
   );

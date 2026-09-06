@@ -1,14 +1,22 @@
 import {Technology} from "@/project/tech";
 
-export interface Project {
+interface ProjectType {
   slug: string;
   name: string;
-  href: string;
-  hrefInternal?: string;
   repo: string;
   description: string;
   tech: Array<Technology>;
 }
+
+type ProjectAdditional = ({
+  href: string;
+  hrefInternal?: string;
+} | {
+  href?: undefined;
+  hrefInternal: string;
+});
+
+export type Project = ProjectType & ProjectAdditional;
 
 export const projects: Record<string, Project> = {
   portfolio: {
@@ -35,5 +43,13 @@ export const projects: Record<string, Project> = {
     repo: "https://github.com/ShiftingDawn/Tracker",
     description: "An application to track quest-like objects with tasks and subtasks",
     tech: ["typescript", "svelte", "tailwind", "drizzle", "postgres", "redis"],
+  },
+  feylon: {
+    slug: "feylon",
+    name: "Feylon",
+    hrefInternal: "/projects/feylon",
+    repo: "https://github.com/ShiftingDawn/archived_Feylon",
+    description: "Feylon is a Concatenative Stack-Oriented Programming Language inspired by Forth and Porth.",
+    tech: ["rust", "assembly"]
   }
 };

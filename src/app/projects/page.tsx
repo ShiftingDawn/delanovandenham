@@ -13,6 +13,7 @@ export default function PageProjects() {
       <ProjectCard project={projects.portfolio}/>
       <ProjectCard project={projects.friday_at_work}/>
       <ProjectCard project={projects.tracker}/>
+      <ProjectCard project={projects.feylon}/>
     </Page>
   );
 }

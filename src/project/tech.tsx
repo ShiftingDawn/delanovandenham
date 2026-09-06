@@ -1,12 +1,13 @@
 import {JSXElementConstructor} from "react";
 import {
+  TechIconAssembly,
   TechIconCloudflareWorkers,
   TechIconDrizzle,
   TechIconNextJs,
   TechIconPostgres,
   TechIconPrisma,
   TechIconReact,
-  TechIconRedis,
+  TechIconRedis, TechIconRust,
   TechIconSvelte,
   TechIconTailwind,
   TechIconTypeScript
@@ -16,6 +17,8 @@ import {BucketIcon} from "@hugeicons/core-free-icons";
 
 export const technologies: Record<string, [string, JSXElementConstructor<unknown>]> = {
   typescript: ["Typescript", TechIconTypeScript],
+  rust: ["Rust", TechIconRust],
+  assembly: ["Assembly", TechIconAssembly],
   react: ["React", TechIconReact],
   next: ["Next", TechIconNextJs],
   tailwind: ["TailwindCSS", TechIconTailwind],
