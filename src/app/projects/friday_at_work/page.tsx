@@ -12,6 +12,14 @@ export default function PageProject() {
           selected person&apos;s receipt using the current configured drink price.
         </p>
       </ProjectImage>
+      <ProjectImage title="Keeping score" src={`/projects/friday_at_work/scores.png`}
+                    alt={'Screenshot of scoreboard page'}>
+        <p>
+          A dynamic scoreboard providing an overview of consumption trends across the current and previous week and
+          month. It highlights the top drinkers, biggest spenders, and most popular drinks, making it easy to see who
+          and what is driving consumption at a glance.
+        </p>
+      </ProjectImage>
       <ProjectImage title="Drink management" src={`/projects/friday_at_work/drinks.png`}
                     alt={`screenshot of drinks page`}>
         <p>
