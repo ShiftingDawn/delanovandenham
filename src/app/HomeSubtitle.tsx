@@ -13,6 +13,7 @@ export function HomeSubtitle() {
                 "Junior Software Developer",
                 "Junior Front-end Developer",
                 "Junior Back-end Developer",
+                "Junior Full-Stack Developer",
                 "Cat lover",
                 "Tech enthusiast",
             ]),
